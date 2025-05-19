@@ -1,0 +1,5 @@
+Please install my fork of insert_dylib (included in the dist folder in this repo, make sure to make it executable) somewhere in PATH before building.
+
+You must also install all of the typical dev tools such as clang, GNU make, XCode, etc.
+
+Then, you can use "make 64" to build a 64-bit version, or "make 32" to build a 32-bit version.

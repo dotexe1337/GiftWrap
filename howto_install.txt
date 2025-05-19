@@ -1,0 +1,7 @@
+Please install install_name_tool (I think this is included with XCode? Someone please make an issue on GiftWrap's GitHub repo if not and I will write some install steps) before installing.
+
+Then, for example, to replace imports to libSystem.B.dylib with GiftWrap in SeaLion's libmozglue.dylib:
+
+mkdir ~/Desktop/SeaLion.app/Contents/Frameworks
+cp GiftWrap.dylib ~/Desktop/SeaLion.app/Contents/Frameworks/GiftWrap.dylib
+install_name_tool -change /usr/lib/libSystem.B.dylib @executable_path/../Frameworks/GiftWrap.dylib ~/Desktop/SeaLion.app/Contents/MacOS/libmozglue.dylib
